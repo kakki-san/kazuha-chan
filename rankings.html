@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rankings - GradeHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-brand">
+            <h2>GradeHub</h2>
+        </div>
+        <ul class="navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="students.html">Students</a></li>
+            <li><a href="subjects.html">Subjects</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="rankings.html" class="active">Rankings</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<section class="page-header">
+    <div class="container">
+        <h1>Student Rankings</h1>
+        <p>View student rankings based on average grades</p>
+    </div>
+</section>
+
+<!-- Main Content -->
+<section class="page-content">
+    <div class="container">
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <div class="filter-group">
+                <label for="filterYear">Filter by Year:</label>
+                <select id="filterYear" onchange="filterRankings()">
+                    <option value="">All Years</option>
+                    <option value="1st Year">1st Year</option>
+                    <option value="2nd Year">2nd Year</option>
+                    <option value="3rd Year">3rd Year</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="filterStream">Filter by Stream:</label>
+                <select id="filterStream" onchange="filterRankings()">
+                    <option value="">All Streams</option>
+                    <option value="Science">Science</option>
+                    <option value="Literature">Literature</option>
+                    <option value="Mathematics">Mathematics</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Rankings Table -->
+        <div class="table-container">
+            <table class="data-table rankings-table">
+                <thead>
+                    <tr>
+                        <th class="rank-column">Rank</th>
+                        <th>Student Code</th>
+                        <th>Name</th>
+                        <th>Year</th>
+                        <th>Stream</th>
+                        <th>Average Grade</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="rankingsTableBody">
+                    <!-- Sample Data -->
+                    <tr class="table-row rank-1">
+                        <td class="rank-badge">🥇 1st</td>
+                        <td>STU002</td>
+                        <td>Fatima Ali</td>
+                        <td>2nd Year</td>
+                        <td>Science</td>
+                        <td><span class="grade-badge large">19.2</span></td>
+                        <td><span class="badge badge-success">Excellent</span></td>
+                    </tr>
+                    <tr class="table-row rank-2">
+                        <td class="rank-badge">🥈 2nd</td>
+                        <td>STU001</td>
+                        <td>Ahmed Mohamed</td>
+                        <td>2nd Year</td>
+                        <td>Science</td>
+                        <td><span class="grade-badge large">18.5</span></td>
+                        <td><span class="badge badge-success">Excellent</span></td>
+                    </tr>
+                    <tr class="table-row rank-3">
+                        <td class="rank-badge">🥉 3rd</td>
+                        <td>STU004</td>
+                        <td>Leila Hassan</td>
+                        <td>2nd Year</td>
+                        <td>Science</td>
+                        <td><span class="grade-badge large">17.8</span></td>
+                        <td><span class="badge badge-success">Excellent</span></td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="rank-badge">4th</td>
+                        <td>STU003</td>
+                        <td>Hassan Ibrahim</td>
+                        <td>2nd Year</td>
+                        <td>Literature</td>
+                        <td><span class="grade-badge large">15.2</span></td>
+                        <td><span class="badge badge-warning">Good</span></td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="rank-badge">5th</td>
+                        <td>STU005</td>
+                        <td>Noor Ibrahim</td>
+                        <td>2nd Year</td>
+                        <td>Literature</td>
+                        <td><span class="grade-badge large">14.5</span></td>
+                        <td><span class="badge badge-warning">Good</span></td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="rank-badge">6th</td>
+                        <td>STU006</td>
+                        <td>Omar Khalil</td>
+                        <td>2nd Year</td>
+                        <td>Science</td>
+                        <td><span class="grade-badge large">13.8</span></td>
+                        <td><span class="badge badge-warning">Good</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Statistics Section -->
+        <section class="stats-section">
+            <h2>Performance Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Average Class Grade</h3>
+                    <p class="stat-value">16.8</p>
+                    <p class="stat-label">Out of 20</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Highest Grade</h3>
+                    <p class="stat-value">19.2</p>
+                    <p class="stat-label">Fatima Ali</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Lowest Grade</h3>
+                    <p class="stat-value">13.8</p>
+                    <p class="stat-label">Omar Khalil</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Students</h3>
+                    <p class="stat-value">6</p>
+                    <p class="stat-label">Ranked</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>GradeHub</h4>
+            <p>Professional grade management system</p>
+        </div>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="students.html">Students</a></li>
+                <li><a href="subjects.html">Subjects</a></li>
+                <li><a href="results.html">Results</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 GradeHub. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

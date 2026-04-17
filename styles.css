@@ -1,0 +1,91 @@
+.nav-menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: var(--background);
+    flex-direction: column;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+}   
+
+.nav-menu.active {
+    max-height: 400px;
+}
+
+.nav-menu li {
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.hero {
+    grid-template-columns: 1fr;
+    padding: 60px 0;
+    min-height: auto;
+}
+
+.hero-title {
+    font-size: 36px;
+}
+
+.hero-image {
+    height: 300px;
+}
+
+.content-wrapper {
+    grid-template-columns: 1fr;
+}
+
+.sidebar {
+    position: static;
+}
+
+.sidebar-card {
+    position: static;
+}
+
+.form-row {
+    grid-template-columns: 1fr;
+}
+
+.filter-section {
+    flex-direction: column;
+}
+
+.subjects-grid {
+    grid-template-columns: 1fr;
+}
+
+.data-table {
+    font-size: 14px;
+}
+
+.data-table th,
+.data-table td {
+    padding: 12px;
+}
+
+.hero-buttons {
+    flex-direction: column;
+}
+
+.btn {
+    width: 100%;
+}
+.section-title {
+    font-size: 28px;
+}
+
+.features-grid {
+    grid-template-columns: 1fr;
+}
+
+.modal-content {
+    width: 95%;
+}
+
+.stats .container {
+    grid-template-columns: 1fr 1fr;
+}
